@@ -231,6 +231,7 @@ body {
 
 .profile-image img {
     max-width: 3.75rem;
+    border-radius: 50%;
 }
 
 .contact-card .chat .chat-profile-name {
@@ -264,20 +265,8 @@ body {
     line-height: 160%
 }
 
-
-/* .contact-card .status-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-items: end;
-} */
-
 .contact-card .status-icon {
     display: block;
-    /* flex-direction: column; */
-    /* align-items: flex-end; */
-    /* justify-items: end; */
-    /* margin-top: 1rem; */
 }
 
 .contact-card .status-icon div {
@@ -314,7 +303,7 @@ body {
     line-height: 0;
     background: #24D366;
     /* max-width: 1rem; */
-    margin-left: 3.5rem;
+    /* margin-left: 3.5rem; */
     border-radius: 50%;
     width: 1.2rem;
 }
@@ -328,10 +317,51 @@ body {
     height: 100%;
 }
 
+#right header {
+    display: flex;
+    justify-content: space-between;
+    /* max-height: 75px; */
+    background: #F7F7FC;
+    padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+}
 
-/* @media (max-width:1200px) {
-    .nav-item .num-notification {
+#right header .account {
+    margin: 0;
+}
+
+#right header .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.75rem;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 421px) and (max-width:992px) {
+    /* .nav-item .num-notification {
         position: relative;
         right: 2rem;
+    } */
+    #right {
+        display: none;
     }
-} */
+}
+
+@media (max-width:420px) {
+    /* .nav-item .num-notification {
+        position: relative;
+        right: 2rem;
+    } */
+    #right {
+        display: none;
+    }
+    #left .nav {
+        display: none;
+    }
+    #left {
+        grid-template-areas: 'header header' 'main main';
+        grid-template-columns: 94fr 312fr;
+        grid-template-rows: 53fr 708fr;
+    }
+}
