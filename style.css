@@ -422,7 +422,7 @@ p.moment {
 }
 
 .chat.sent-chat {
-    position: relative;
+    position: absolute;
     /* left: 70%; */
     right: 2%;
     border-radius: 7.5px 0px 7.5px 7.5px;
