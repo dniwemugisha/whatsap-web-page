@@ -12,6 +12,7 @@ body {
     max-height: 100vh;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -39,10 +40,11 @@ body {
 
 #left .header {
     position: sticky;
-    top: 0;
+    top: -30px;
     grid-area: header;
     display: flex;
     justify-content: flex-end;
+    z-index: 2000;
 }
 
 #left .nav {
@@ -537,12 +539,28 @@ footer {
     #right {
         display: none;
     }
-    #left .nav {
+    /* #left .nav {
         display: none;
-    }
+    } */
     #left {
-        grid-template-areas: 'header header' 'main main';
+        grid-template-areas: 'nav header' 'main main';
         grid-template-columns: 94fr 312fr;
         grid-template-rows: 53fr 708fr;
+    }
+    #left .main-items {
+        flex-direction: row;
+        gap: 1.3rem;
+    }
+    #left .nav-bottom {
+        display: none;
+    }
+    .nav-item {
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+    .nav-item div:nth-of-type(2) {
+        display: none;
     }
 }
