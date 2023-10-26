@@ -341,7 +341,7 @@ p.encrypted-disclaimer {
     padding: .75rem 1.25rem;
     padding-left: 3.1rem;
     border-radius: 12px;
-    background: #FEECDC url(images/padlock.svg) 5% center no-repeat;
+    background: #FEECDC;
     color: #3B4A54;
     font-size: 0.625rem;
     font-style: normal;
@@ -378,8 +378,9 @@ p.moment {
 }
 
 .chats .chat {
+    position: relative;
     display: inline-flex;
-    max-width: 40%;
+    max-width: 60%;
     padding: 6px 7px 3px 9px;
     align-items: flex-end;
     border-radius: 7.5px;
@@ -401,10 +402,9 @@ p.moment {
 }
 
 .chat .chat-time {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start; */
-    float: right;
+    justify-content: flex-start;
     color: #667781;
     font-family: Helvetica Neue;
     font-size: 11px;
@@ -414,6 +414,13 @@ p.moment {
     /* 136.364% */
     margin-bottom: 0;
     padding: 0 0.3rem;
+}
+
+.chats .chat .img-time {
+    position: absolute;
+    right: 1%;
+    margin-bottom: 0;
+    color: white;
 }
 
 .chats .sent {
@@ -426,32 +433,17 @@ p.moment {
 .chat.sent-chat {
     position: absolute;
     /* left: 70%; */
-    right: 3%;
+    right: 2%;
     border-radius: 7.5px 0px 7.5px 7.5px;
     background: #D9FDD3;
     box-shadow: 0px 1px 0.5px 0px rgba(11, 20, 26, 0.13);
     max-width: 40%;
 }
 
-.chats .sent::after {
-    content: "";
-    position: absolute;
-    right: 2%;
-    width: 1rem;
-    height: 1rem;
-    background: #D9FDD3;
-    background: linear-gradient(120deg, #D9FDD3 75%, #FAFAFA 1%)
-}
-
 .chats .sent-chat .chat-time p {
     margin-top: 0;
     margin-bottom: 0;
 }
-
-
-/* .status--field {
-    display: inline;
-} */
 
 
 /* Media Queries */
