@@ -25,6 +25,8 @@ const setHeightAbsolute = () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 1)
+
     setHeightAbsolute()
 })
 
