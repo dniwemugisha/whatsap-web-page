@@ -463,12 +463,12 @@ p.moment {
 
 .sent::after {
     position: absolute;
-    right: 1%;
+    right: 1.2%;
     content: '';
-    width: 1.5%;
-    height: 1rem;
+    width: 0.5rem;
+    height: .8rem;
     /* background-color: #D9FDD3; */
-    background: linear-gradient(110deg, #D9FDD3 50%, white);
+    background: linear-gradient(115deg, #D9FDD3 65%, white 20%);
     /* background: linear-gradient(45deg, blue, red); */
 }
 
