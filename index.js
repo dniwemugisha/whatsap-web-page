@@ -4,7 +4,7 @@ const setHeightAbsolute = () => {
 
     let chats = Array.from(receivedChats);
 
-    let i = 0
+    let i = 0;
     let offsetHeight = 0
     let parentElement;
 
